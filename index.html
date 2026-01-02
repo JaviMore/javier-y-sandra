@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nos Casamos! - Javier & Sandra</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+    <div class="mobile-wrapper">
+
+        <header class="header">
+            <img src="assets/1.svg" alt="Javier y Sandra" class="header-photo" onerror="this.style.display='none'; document.getElementById('ph1').style.display='block'">
+            <div id="ph1" class="placeholder" style="display:none; height: 250px;">FOTO CABECERA</div>
+        </header>
+
+        <section id="fecha" class="date-section">
+            <img src="assets/Fecha.svg" alt="Calendario" style="width: 100%; margin: 0 auto;" onerror="this.style.display='none'; document.getElementById('ph2').style.display='block'">
+            <div id="ph2" class="placeholder" style="display:none;">IMAGEN CALENDARIO (30 31 1 2...)</div>
+            <img src="assets/Nosotros.svg" alt="Nosotros" style="width: 100%; margin: 0 auto;" onerror="this.style.display='none'; document.getElementById('ph3').style.display='block'">
+            <div id="ph3" class="placeholder" style="display:none;">Fotos novios</div>
+        </section>
+        <div> 
+            <a href="https://maps.app.goo.gl/1bugpQnWrMNynqXT8" target="_blank">
+            <img src="assets/Ubicacion.svg" style="width: 90%;">
+            </a>
+        </div>
+
+        <section class="timeline-section">
+            <img src="assets/timeline.svg" alt="Autobús" class="timeline-block">
+        </section>
+
+        <div class="guest-section">
+            <div class="guest-content">
+                <p class="guest-intro">Esta invitación es para</p>
+                
+                <div class="guest-name-display font-script" id="nombre-invitado">
+                    Familia y Amigos
+                </div>
+
+                <p style="font-size: 0.8rem; margin-top: 5px;">POR FAVOR RELLENAD EL SIGUIENTE FORMULARIO ANTES DEL <strong>1 DE FEBRERO</strong></p>
+                 <a href="https://forms.google.com/TU_FORMULARIO" target="_blank" class="confirm-link">                  
+                    <img src="assets/FORMULARIO_1.svg" alt="Formulario" style="width: 60%;">
+                </a>
+            </div>
+        </div>
+        <div id="regalos" class="regalo-section">
+           <img src="assets/REGALO.svg" alt="Regalos">
+           <div class="regalo-text">
+               <p class="regalo-title">REGALOS</p>
+               <div class="regalo-cuenta">
+                   <span id="numero-cuenta">ES77 1465 0100 9417 5794 6666</span>
+                   <button class="copy-btn" onclick="copiarNumero()" title="Copiar número de cuenta">
+                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                           <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                           <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                       </svg>
+                   </button>
+               </div>
+           </div>
+        </div>
+
+        <div>
+            <a href="https://open.spotify.com/playlist/29swW3FrmsEYE6kfByveGC?si=0aad67ae2e35498a" target="_blank">
+            <img src="assets/SPOTY.svg" alt="Spotify" style="width: 90%; margin-top: 40px;">
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p style="font-weight: bold; margin-bottom: 1px;">Gracias por formar parte de nuestra historia</p>
+            
+            <div>
+                <img src="assets/3_FOTOS.svg" style="width: 100%;">
+            </div>
+
+            <img src="assets/JUST_MARRIED.svg" style="margin-top: 10px; width: 70%;">
+        </footer>
+
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
