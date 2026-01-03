@@ -34,23 +34,12 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
-    /* Forzar renderizado nítido en Safari/iOS */
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-font-smoothing: antialiased;
-    shape-rendering: geometricPrecision;
-}
-
-/* SVG específico - mayor nitidez */
-img[src$=".svg"] {
-    shape-rendering: crispEdges;
-    -webkit-transform: translateZ(0) scale(1, 1);
-    transform: translateZ(0) scale(1, 1);
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 /* Clases de tipografía */
