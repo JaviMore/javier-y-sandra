@@ -34,6 +34,12 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 /* Clases de tipografía */
