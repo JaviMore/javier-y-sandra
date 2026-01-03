@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmar Asistencia - Javier & Sandra</title>
-    
+
     <link rel="apple-touch-icon" sizes="57x57" href="assets/icon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/icon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/icon/apple-icon-72x72.png">
@@ -118,6 +118,16 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        label.required::after {
+            content: " *";
+            color: var(--red-accent);
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
         }
 
         input[type="text"],
@@ -241,31 +251,49 @@
             div.innerHTML = `
                 <button type="button" class="btn-delete" onclick="eliminar(this)">X</button>
                 <h4>Asistente</h4>
-                <label>Tipo:</label>
+                <label class="required">Tipo:</label>
                 <select name="Tipo" id="Tipo" class="dato" data-key="Tipo" required>
                     <option value="Adulto">Adulto</option>
                     <option value="Niño">Niño</option>
                 </select>
-                <label>Nombre:</label>
+                <label class="required">Nombre:</label>
                 <input type="text" class="dato" data-key="Nombre" required>
                
-                <label>Apellidos:</label>
+                <label class="required">Apellidos:</label>
                 <input type="text" class="dato" data-key="Apellidos" required>
 
-                <label>Bus:</label>
-                <select name="Bus" id="Bus" class="dato" data-key="Bus" required>
+                <label class="required">Bus:</label>
+                <select name="Bus" class="dato bus-select" data-key="Bus" required>
+                    <option value="No">No</option>
                     <option value="Si">Si</option>
-                    <option value="NNo">No</option>
                 </select>
-                <label>Salida Bus:</label>
-                <select name="Salida" id="Salida" class="dato" data-key="Salida" required>
-                    <option value="Almassera">Almassera</option>
-                    <option value="Aldaya">Aldaya</option>
-                </select>
+                <div class="salida-container hidden">
+                    <label class="required">Salida Bus:</label>
+                    <select name="Salida" class="dato salida-select" data-key="Salida">
+                        <option value="Almassera">Almassera</option>
+                        <option value="Aldaya">Aldaya</option>
+                    </select>
+                </div>
                 <label>Intolerancias:</label>
                 <input type="text" class="dato" data-key="Intolerancias">
             `;
             container.appendChild(div);
+
+            // Añadir evento para mostrar/ocultar Salida Bus
+            const busSelect = div.querySelector('.bus-select');
+            const salidaContainer = div.querySelector('.salida-container');
+            const salidaSelect = div.querySelector('.salida-select');
+
+            busSelect.addEventListener('change', function() {
+                if (this.value === 'Si') {
+                    salidaContainer.classList.remove('hidden');
+                    salidaSelect.setAttribute('required', 'required');
+                } else {
+                    salidaContainer.classList.add('hidden');
+                    salidaSelect.removeAttribute('required');
+                    salidaSelect.value = 'Almassera'; // Reset al valor por defecto
+                }
+            });
         }
 
         // Función para eliminar una tarjeta
