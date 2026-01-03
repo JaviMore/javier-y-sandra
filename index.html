@@ -5,34 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Nos Casamos! - Javier & Sandra</title>
     
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
+    <link rel="manifest" href="assets/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preload" as="image" href="assets/img/Cabecera.svg">
+    <link rel="preload" as="image" href="assets/img/Fecha.svg">
 </head>
 <body>
 
     <div class="mobile-wrapper">
 
         <header class="header">
-            <img src="assets/1.svg" alt="Javier y Sandra" class="header-photo" onerror="this.style.display='none'; document.getElementById('ph1').style.display='block'">
+            <img src="assets/img/Cabecera.svg" alt="Javier y Sandra" class="header-photo" onerror="this.style.display='none'; document.getElementById('ph1').style.display='block'">
             <div id="ph1" class="placeholder" style="display:none; height: 250px;">FOTO CABECERA</div>
         </header>
 
         <section id="fecha" class="date-section">
-            <img src="assets/Fecha.svg" alt="Calendario" style="width: 100%; margin: 0 auto;" onerror="this.style.display='none'; document.getElementById('ph2').style.display='block'">
+            <img src="assets/img/Fecha.svg" alt="Calendario" style="width: 100%; margin: 0 auto;" onerror="this.style.display='none'; document.getElementById('ph2').style.display='block'">
             <div id="ph2" class="placeholder" style="display:none;">IMAGEN CALENDARIO (30 31 1 2...)</div>
-            <img src="assets/Nosotros.svg" alt="Nosotros" style="width: 100%; margin: 0 auto;" onerror="this.style.display='none'; document.getElementById('ph3').style.display='block'">
+            <img src="assets/img/Nosotros.svg" alt="Nosotros" loading="lazy" style="width: 100%; margin: 0 auto;" onerror="this.style.display='none'; document.getElementById('ph3').style.display='block'">
             <div id="ph3" class="placeholder" style="display:none;">Fotos novios</div>
         </section>
         <div> 
             <a href="https://maps.app.goo.gl/1bugpQnWrMNynqXT8" target="_blank">
-            <img src="assets/Ubicacion.svg" style="width: 90%;">
+            <img src="assets/img/Ubicacion.svg" loading="lazy" style="width: 90%;">
             </a>
         </div>
 
         <section class="timeline-section">
-            <img src="assets/timeline.svg" alt="Autobús" class="timeline-block">
+            <img src="assets/img/Timeline.svg" alt="Autobús" loading="lazy" class="timeline-block">
         </section>
 
         <div class="guest-section">
@@ -45,12 +66,12 @@
 
                 <p style="font-size: 0.8rem; margin-top: 5px;">POR FAVOR RELLENAD EL SIGUIENTE FORMULARIO ANTES DEL <strong>1 DE FEBRERO</strong></p>
                  <a href="https://forms.google.com/TU_FORMULARIO" target="_blank" class="confirm-link">                  
-                    <img src="assets/FORMULARIO_1.svg" alt="Formulario" style="width: 60%;">
+                    <img src="assets/img/Formulario.svg" alt="Formulario" loading="lazy" style="width: 60%;">
                 </a>
             </div>
         </div>
         <div id="regalos" class="regalo-section">
-           <img src="assets/REGALO.svg" alt="Regalos">
+           <img src="assets/img/Regalo.svg" alt="Regalos" loading="lazy">
            <div class="regalo-text">
                <p class="regalo-title">REGALOS</p>
                <div class="regalo-cuenta">
@@ -67,7 +88,7 @@
 
         <div>
             <a href="https://open.spotify.com/playlist/29swW3FrmsEYE6kfByveGC?si=0aad67ae2e35498a" target="_blank">
-            <img src="assets/SPOTY.svg" alt="Spotify" style="width: 90%; margin-top: 40px;">
+            <img src="assets/img/Spotify.svg" alt="Spotify" loading="lazy" style="width: 90%; margin-top: 40px;">
             </a>
         </div>
 
@@ -75,14 +96,14 @@
             <p style="font-weight: bold; margin-bottom: 1px;">Gracias por formar parte de nuestra historia</p>
             
             <div>
-                <img src="assets/3_FOTOS.svg" style="width: 100%;">
+                <img src="assets/img/Collage.svg" loading="lazy" style="width: 100%;">
             </div>
 
-            <img src="assets/JUST_MARRIED.svg" style="margin-top: 10px; width: 70%;">
+            <img src="assets/img/JustMarried.svg" loading="lazy" style="margin-top: 10px; width: 70%;">
         </footer>
 
     </div>
 
-    <script src="assets/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
