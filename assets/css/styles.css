@@ -116,6 +116,39 @@ img {
     font-weight: 800;
     font-size: 1.2rem;
     text-transform: uppercase;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform: skewY(0) !important; /* Anular la inclinación del padre */
+    position: relative;
+    z-index: 100;
+    isolation: isolate; /* Crear nuevo contexto de apilamiento */
+}
+
+.confirm-link:hover {
+    transform: skewY(0) scale(1.05) rotate(1deg) !important;
+}
+
+.confirm-link:active {
+    transform: skewY(0) scale(0.98) !important;
+}
+
+.confirm-link img {
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    display: block !important;
+    margin: 0 auto;
+    transition: filter 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transform: none !important; /* Anula el transform global */
+    -webkit-transform: none !important;
+    backface-visibility: hidden;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.confirm-link:hover img {
+    filter: drop-shadow(0 4px 8px rgba(204, 0, 0, 0.3));
 }
 
 /* --- FOOTER --- */
@@ -198,4 +231,32 @@ img {
     padding: 20px;
     color: #666;
     font-size: 0.8rem;
+}
+
+/* --- SPOTIFY LINK --- */
+.spotify-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.spotify-link img {
+    width: 90%;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: filter 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.spotify-link:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.spotify-link:hover img {
+    filter: drop-shadow(0 6px 12px rgba(30, 215, 96, 0.3));
+}
+
+.spotify-link:active {
+    transform: scale(0.98);
 }
